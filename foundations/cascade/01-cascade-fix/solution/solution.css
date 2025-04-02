@@ -1,5 +1,5 @@
-body{
-  font-family:Arial, Helvetica, sans-serif;
+body {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .para,
@@ -24,19 +24,19 @@ div.text {
   font-size: 22px;
 }
 
-/* SOLUTION */
+/* SOLUCIÓN */
 
-/* 
-  For the following rule, we removed it from its original position in the file:
+/*
+  Para la siguiente regla, la eliminamos de su posición original en el archivo:
 
   .small-para {
     font-size: 14px;
     font-weight: 800;
-  } 
+  }
 
-  Then we placed it after the .para selector, taking advantage of the rule order since both selectors have the same specificity. 
-  
-  Another solution would be keeping it in its original place and just chaining selectors, giving this rule a higher specificity:
+  Luego la colocamos después del selector .para, aprovechando el orden de las reglas, ya que ambos selectores tienen la misma especificidad.
+
+  Otra solución sería mantenerla en su lugar original y simplemente encadenar selectores, dándole a esta regla una mayor especificidad:
 
   p.small-para {
     font-size: 14px;
@@ -49,18 +49,18 @@ div.text {
   font-weight: 800;
 }
 
-/* 
-  For the following rule we removed the original .confirm selector:
+/*
+  Para la siguiente regla, eliminamos el selector original .confirm:
 
   .confirm {
     background: green;
     color: white;
     font-weight: bold;
-  } 
+  }
 
-  Then we used an ID selector instead, since it has a higher specificity than the .button selector.
+  Luego usamos un selector de ID en su lugar, ya que tiene una mayor especificidad que el selector .button.
 
-  Other solutions would be to simply move the .confirm rule below the .button rule, or to use the .button.confirm selector without moving it:
+  Otras soluciones serían simplemente mover la regla .confirm debajo de la regla .button, o usar el selector .button.confirm sin moverla:
 
   .button.confirm {
     background: green;
@@ -76,7 +76,7 @@ div.text {
 }
 
 /*
-  For the following rule we first removed it from its original position in the file: 
+  Para la siguiente regla, primero la eliminamos de su posición original en el archivo:
 
   .child {
     color: rgb(0, 0, 0);
@@ -84,10 +84,9 @@ div.text {
     font-size: 14px;
   }
 
-  Then we added another selector to create a descendant combinator. If we only created a descendant combinator, the specificity would be tied with the
-  div.text selector and it would come down to rule order, and if we only moved it, the div.text selector would still have a higher specificity.
-  
-  Another solution would be to keep the rule where it was and just replace the div selector with the .text selector:
+  Luego añadimos otro selector para crear un combinador de descendientes. Si solo creáramos un combinador de descendientes, la especificidad estaría empatada con el selector div.text y dependería del orden de las reglas, y si solo la moviéramos, el selector div.text aún tendría una mayor especificidad.
+
+  Otra solución sería mantener la regla donde estaba y simplemente reemplazar el selector div con el selector .text:
 
   .text .child {
     color: rgb(0, 0, 0);
